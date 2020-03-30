@@ -39,28 +39,63 @@ const mockItems = [
 		likes: 37
 	}
 ];
+
+function fireResize(width: number) {
+	window.innerWidth = width;
+    window.dispatchEvent(new Event('resize'))
+}
   
 describe('<CarouselComponent /> ', () => {
-	it("renders as expected", () => {
-		const { getByTestId } = render(<CarouselComponent photos={mockItems} />);
-		const items = getByTestId("carousel-items");
-		expect(items.children.length).toBe(5);
+	describe('when renders in desktop viewport', () => {
+		beforeEach(() => {
+			fireResize(1280);
+		});
+
+		it("should render 5 carousel items", () => {
+			const { getByTestId } = render(<CarouselComponent photos={mockItems} />);
+			const items = getByTestId("carousel-items");
+			expect(items.children.length).toBe(5);
+		});
+
+		it("should active the 3rd element from the photos list", () => {
+			const { getByTestId } = render(<CarouselComponent photos={mockItems} />);
+			const items = getByTestId("carousel-items");
+			expect(items.children[2].textContent).toBe(mockItems[2].user);
+		});
+
+		it("previos and next buttons should work", () => {
+			const { getByTestId } = render(<CarouselComponent photos={mockItems} />);
+			const items = getByTestId("carousel-items");
+			const previous = getByTestId("prev-btn");
+			const next = getByTestId("next-btn");
+			fireEvent.click(next);
+			expect(items.children[2].textContent).toBe(mockItems[3].user)
+			fireEvent.click(previous);
+			expect(items.children[2].textContent).toBe(mockItems[2].user);
+		});
 	});
 
-	it("should active the 3rd element from the photos list", () => {
-		const { getByTestId } = render(<CarouselComponent photos={mockItems} />);
-		const items = getByTestId("carousel-items");
-		expect(items.children[2].textContent).toBe(mockItems[2].user);
+	describe('when renders in mobile viewport', () => {
+		beforeEach(() => {
+			fireResize(480);
+		});
+		
+		it("should render 1 carousel item", () => {
+			const { getByTestId } = render(<CarouselComponent photos={mockItems} />);
+			const items = getByTestId("carousel-items");
+			expect(items.children.length).toBe(1);
+		});
 	});
 
-	it("previos and next buttons should work", () => {
-		const { getByTestId } = render(<CarouselComponent photos={mockItems} />);
-		const items = getByTestId("carousel-items");
-		const previous = getByTestId("prev-btn");
-		const next = getByTestId("next-btn");
-		fireEvent.click(next);
-		expect(items.children[2].textContent).toBe(mockItems[3].user)
-		fireEvent.click(previous);
-		expect(items.children[2].textContent).toBe(mockItems[2].user);
+	describe('when renders in tablet viewport', () => {
+		beforeEach(() => {
+			fireResize(960);
+		});
+		
+		it("should render 3 carousel items", () => {
+			const { getByTestId } = render(<CarouselComponent photos={mockItems} />);
+			const items = getByTestId("carousel-items");
+			expect(items.children.length).toBe(3);
+		});
 	});
 });
