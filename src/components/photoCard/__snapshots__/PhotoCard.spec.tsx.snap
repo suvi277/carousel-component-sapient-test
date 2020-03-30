@@ -1,7 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PhotoCard /> with default props renders as expected 1`] = `ShallowWrapper {}`;
-
-exports[`PhotoCard Component renders as expected 1`] = `ShallowWrapper {}`;
-
-exports[`StreamCard Component renders as expected 1`] = `ShallowWrapper {}`;
