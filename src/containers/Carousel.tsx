@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { State } from '../reducers';
 import Loader from "react-loader-spinner";
 import { getPhotos } from '../actions/photos/photos.action';
+import CarouselComponent from '../components/carousel/Carousel';
 import { Photo } from '../types/Photo';
 import { useEffect } from 'react';
 
@@ -23,7 +24,7 @@ const CarouselContainer: React.FC<Props> = ({ photos = [], status, getPhotos }) 
 				<Loader type="Grid" color="#00BFFF" height={100} width={100} timeout={3000}/>
 			) : (
 				status === 'loaded' && (
-						<div>Carousel Component</div>
+						<CarouselComponent photos={photos}/>
 				)
 			)}
 			{status === 'error' && <div className="error-content">Oops there is an error! Try Again later</div>}
