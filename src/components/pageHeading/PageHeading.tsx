@@ -2,10 +2,10 @@ import React from 'react';
 import './PageHeading.scss';
 
 interface Props {
-    title: string;
+  title: string;
 }
 
 const PageHeading: React.FC<Props> = ({ title }) => {
-    return <h1 className="page-headline">{title}</h1>;
+  return <h1 className="page-headline">{title}</h1>;
 };
 export default PageHeading;
