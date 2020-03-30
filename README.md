@@ -9,13 +9,13 @@ The Carousel is responsive and accesible with the following features
     * When you click the `prev` button, it will centre the previous item
     * When you click the `next` button, it will centre the next item
 
-    ###Desktop
+### Desktop
     It will load with 5 items
 
-    ###Tablet
+### Tablet
     It will load with 3 items
 
-    ###Mobile
+### Mobile
     It will load with 1 item
 
 
@@ -38,7 +38,9 @@ yarn build
 ## github deploy
 yarn deploy
 ```
+
 ##Demo
+
 You can find out the working example here
 https://suvi277.github.io/carousel-component-sapient-test/
 
