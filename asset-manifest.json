@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/carousel-component-sapient-test/static/css/main.833a6889.chunk.css",
+    "main.js": "/carousel-component-sapient-test/static/js/main.45133f04.chunk.js",
+    "main.js.map": "/carousel-component-sapient-test/static/js/main.45133f04.chunk.js.map",
+    "runtime-main.js": "/carousel-component-sapient-test/static/js/runtime-main.cd4c8de9.js",
+    "runtime-main.js.map": "/carousel-component-sapient-test/static/js/runtime-main.cd4c8de9.js.map",
+    "static/js/2.6d61e812.chunk.js": "/carousel-component-sapient-test/static/js/2.6d61e812.chunk.js",
+    "static/js/2.6d61e812.chunk.js.map": "/carousel-component-sapient-test/static/js/2.6d61e812.chunk.js.map",
+    "index.html": "/carousel-component-sapient-test/index.html",
+    "precache-manifest.6137703692b736b6b18406afeff590b8.js": "/carousel-component-sapient-test/precache-manifest.6137703692b736b6b18406afeff590b8.js",
+    "service-worker.js": "/carousel-component-sapient-test/service-worker.js",
+    "static/css/main.833a6889.chunk.css.map": "/carousel-component-sapient-test/static/css/main.833a6889.chunk.css.map",
+    "static/js/2.6d61e812.chunk.js.LICENSE.txt": "/carousel-component-sapient-test/static/js/2.6d61e812.chunk.js.LICENSE.txt",
+    "static/media/Carousel.scss": "/carousel-component-sapient-test/static/media/arrow.34456280.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd4c8de9.js",
+    "static/js/2.6d61e812.chunk.js",
+    "static/css/main.833a6889.chunk.css",
+    "static/js/main.45133f04.chunk.js"
+  ]
+}
